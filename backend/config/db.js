@@ -4,7 +4,7 @@ import color from 'colors';
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI_PROD, {
+    const conn = await mongoose.connect(process.env.MONGO_URI_DEV, {
       useFindAndModify: false,
       useCreateIndex: true,
       useUnifiedTopology: true,
@@ -19,6 +19,8 @@ const connectDB = async () => {
 };
 
 export default connectDB;
+
+
 
 
 
